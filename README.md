@@ -2,7 +2,6 @@ Lic - easy, safe object slicing for Swift
 
 
 ## Summary
-
 *Lic* is a μ-framework that makes getting slices of arrays and strings in Swift safe and easy:
 
 ```swift
@@ -39,3 +38,7 @@ Include the single source file in your project.
 ## What kind of name is "Lic"?
 
 It's `"slice"[1,-1]` - a slice of the word "slice", you know, what *Lic* produces.
+
+## License
+
+BSD, see [LICENSE](https://github.com/dduan/Lic/blob/master/LICENSE)
