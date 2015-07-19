@@ -16,6 +16,7 @@
 		94E1ECCB1B5B284700387C5D /* Lic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E1EC9C1B5B279900387C5D /* Lic.framework */; };
 		94E1ECD11B5B284D00387C5D /* LicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1EC8E1B5B0CCB00387C5D /* LicTests.swift */; };
 		94E1ECD21B5B284E00387C5D /* LicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1EC8E1B5B0CCB00387C5D /* LicTests.swift */; };
+		94E1ECFD1B5B304100387C5D /* Lic-OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E1EC9E1B5B279900387C5D /* Lic-OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				94E1EC7D1B5B0C4500387C5D /* Source */,
-				94E1EC8D1B5B0CCB00387C5D /* LicTests */,
+				94E1EC8D1B5B0CCB00387C5D /* Tests */,
 				94E1EC9D1B5B279900387C5D /* Lic-OSX */,
 				94E1ECAA1B5B27AB00387C5D /* Lic-iOS */,
 				94E1ECB81B5B283800387C5D /* Lic-iOSTests */,
@@ -119,11 +120,12 @@
 			path = Lic;
 			sourceTree = "<group>";
 		};
-		94E1EC8D1B5B0CCB00387C5D /* LicTests */ = {
+		94E1EC8D1B5B0CCB00387C5D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				94E1EC8E1B5B0CCB00387C5D /* LicTests.swift */,
 			);
+			name = Tests;
 			path = LicTests;
 			sourceTree = "<group>";
 		};
@@ -170,6 +172,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E1ECFD1B5B304100387C5D /* Lic-OSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +612,7 @@
 				94E1ECA31B5B279900387C5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94E1ECAE1B5B27AB00387C5D /* Build configuration list for PBXNativeTarget "Lic-iOS" */ = {
 			isa = XCConfigurationList;
@@ -617,6 +621,7 @@
 				94E1ECB01B5B27AB00387C5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94E1ECBF1B5B283800387C5D /* Build configuration list for PBXNativeTarget "Lic-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -625,6 +630,7 @@
 				94E1ECC11B5B283800387C5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94E1ECCE1B5B284700387C5D /* Build configuration list for PBXNativeTarget "Lic-OSXTests" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +639,7 @@
 				94E1ECD01B5B284700387C5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
