@@ -6,7 +6,7 @@ Lic - easy, safe object slicing for Swift
 
 ```swift
 [0,1,2,3][1, -1]            // => ArraySlice([1, 2])
-"Hello"[-1000, nil]         // => "ello"
+"Hello"[-1000, nil]         // => "Hello"
 [1,2,3,4,5,6,7,8][1,5][2,3] // => ArraySlice([4])
 ```
 
