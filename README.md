@@ -2,12 +2,12 @@ Lic - easy, safe object slicing for Swift
 
 
 ## Summary
-*Lic* is a μ-framework that makes getting slices of arrays and strings in Swift safe and easy:
+*Lic* is a μ-framework that makes getting slices of arrays and strings in Swift 2 safe and easy:
 
 ```swift
-    [0,1,2,3][1, -1]            // => ArraySlice([1, 2])
-    "Hello"[-1000, nil]         // => "ello"
-    [1,2,3,4,5,6,7,8][1,5][2,3] // => ArraySlice([4])
+[0,1,2,3][1, -1]            // => ArraySlice([1, 2])
+"Hello"[-1000, nil]         // => "ello"
+[1,2,3,4,5,6,7,8][1,5][2,3] // => ArraySlice([4])
 ```
 
 *Lic* has no dependencies, not even `Foundation`.
