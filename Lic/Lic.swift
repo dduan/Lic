@@ -47,8 +47,8 @@ public extension String {
     public subscript(start:Int?, end:Int?) -> String {
         let (safeStart, safeEnd) = normalize(start, end: end, total: self.characters.count)
 
-        let startIndex = advance(self.startIndex, safeStart)
-        let endIndex = advance(self.startIndex, safeEnd)
+        let startIndex = self.startIndex.advancedBy(safeStart)
+        let endIndex = self.startIndex.advancedBy(safeEnd)
         return self[Range<String.CharacterView.Index>(start:startIndex, end:endIndex)]
     }
 }
