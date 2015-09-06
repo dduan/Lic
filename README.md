@@ -30,6 +30,15 @@ When it comes to slicing, your ranges are always safe and accepted.
 
     github "dduan/Lic"
 
+### Cocoapods
+
+    platform :ios, '8.0'
+    use_frameworks!
+
+    target 'MyApp' do
+      pod 'Lic'
+    end
+
 ### Source File
 Include the single source file in your project.
 
