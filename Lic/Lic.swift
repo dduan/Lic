@@ -9,7 +9,7 @@
 /// - parameter end: any integer to indicate the end of the range
 /// - parameter total: maximum available length
 /// - returns: (start, end), the safe range indicators
-func normalize(start: Int?, end: Int?, total: Int) -> (Int, Int) {
+internal func normalize(start: Int?, end: Int?, total: Int) -> (Int, Int) {
     var actualStart = start == nil ? 0 : start!
     var actualEnd = end == nil ? total : end!
     actualStart = actualStart < 0 ? total + actualStart : actualStart
@@ -20,23 +20,16 @@ func normalize(start: Int?, end: Int?, total: Int) -> (Int, Int) {
     return (min(actualStart, safeEnd), safeEnd)
 }
 
-public extension ArraySlice {
-    /// - parameter start: any integer or `nil` to indicate the beginning of the range
-    /// - parameter end: any integer or `nil` to indicate the end of the range
-    /// - returns: an ArraySlice with content as specified by the input
-    public subscript(start:Int?, end: Int?) -> ArraySlice<Element> {
-        let (safeStart, safeEnd) = normalize(start, end: end, total: self.count)
-        return self[Range<Int>(start: safeStart, end: safeEnd)]
-    }
-}
 
-public extension Array {
+extension CollectionType where Self.Index: RandomAccessIndexType {
     /// - parameter start: any integer or `nil` to indicate the beginning of the range
     /// - parameter end: any integer or `nil` to indicate the end of the range
-    /// - returns: an ArraySlice with content as specified by the input
-    public subscript(start:Int?, end: Int?) -> ArraySlice<Element> {
-        let (safeStart, safeEnd) = normalize(start, end: end, total: self.count)
-        return self[Range<Int>(start: safeStart, end: safeEnd)]
+    /// - returns: an Subsequence with content as specified by the input
+    public subscript(start:Int?, end:Int?) -> Self.SubSequence {
+        let (safeStart, safeEnd) = normalize(start, end: end, total: self.count as! Int)
+        let safeStartIndex = startIndex.advancedBy(safeStart as! Self.Index.Distance)
+        let safeEndIndex = startIndex.advancedBy(safeEnd as! Self.Index.Distance)
+        return self [Range(start: safeStartIndex, end: safeEndIndex)]
     }
 }
 
