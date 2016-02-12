@@ -30,7 +30,7 @@ When it comes to slicing, your ranges are always safe and accepted.
 
     github "dduan/Lic"
 
-### Cocoapods
+### CocoaPods
 
     platform :ios, '8.0'
     use_frameworks!
