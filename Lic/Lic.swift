@@ -29,7 +29,7 @@ extension CollectionType where Self.Index: RandomAccessIndexType {
         let (safeStart, safeEnd) = normalize(start, end: end, total: self.count as! Int)
         let safeStartIndex = startIndex.advancedBy(safeStart as! Self.Index.Distance)
         let safeEndIndex = startIndex.advancedBy(safeEnd as! Self.Index.Distance)
-        return self [Range(start: safeStartIndex, end: safeEndIndex)]
+        return self[safeStartIndex..<safeEndIndex]
     }
 }
 
@@ -42,6 +42,7 @@ public extension String {
 
         let startIndex = self.startIndex.advancedBy(safeStart)
         let endIndex = self.startIndex.advancedBy(safeEnd)
-        return self[Range<String.CharacterView.Index>(start:startIndex, end:endIndex)]
+        return self[startIndex..<endIndex]
     }
 }
+
